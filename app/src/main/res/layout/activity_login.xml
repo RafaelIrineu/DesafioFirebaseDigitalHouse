@@ -4,6 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".login.LoginActivity">
+
+    <ImageView
+        android:id="@+id/imgBackgroundLogin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/splash"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/splash_screen_image"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

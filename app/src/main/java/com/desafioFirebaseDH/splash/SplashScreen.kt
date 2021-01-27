@@ -1,10 +1,12 @@
-package com.DesafioFirebaseDH
+package com.desafioFirebaseDH.splash
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import com.desafioFirebaseDH.MainActivity
+import com.desafioFirebaseDH.R
 
 class SplashScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,6 +21,6 @@ class SplashScreen : AppCompatActivity() {
     }
 
     companion object{
-        const val HANDLER_TIME: Long = 40000
+        const val HANDLER_TIME: Long = 4000
     }
 }

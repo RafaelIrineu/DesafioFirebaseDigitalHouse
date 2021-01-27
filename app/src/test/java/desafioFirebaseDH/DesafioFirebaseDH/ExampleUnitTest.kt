@@ -1,4 +1,4 @@
-package com.DesafioFirebaseDH
+package desafioFirebaseDH.DesafioFirebaseDH
 
 import org.junit.Test
 
