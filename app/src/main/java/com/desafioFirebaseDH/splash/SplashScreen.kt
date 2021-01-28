@@ -7,6 +7,8 @@ import android.os.Handler
 import android.os.Looper
 import com.desafioFirebaseDH.MainActivity
 import com.desafioFirebaseDH.R
+import com.desafioFirebaseDH.login.LoginActivity
+import com.desafioFirebaseDH.register.RegisterActivity
 
 class SplashScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,7 +16,7 @@ class SplashScreen : AppCompatActivity() {
         setContentView(R.layout.activity_splash_screen)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
             finish()
         }, HANDLER_TIME)

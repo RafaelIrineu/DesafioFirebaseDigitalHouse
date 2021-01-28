@@ -5,7 +5,9 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="colorWhite">#fff</color>
     <color name="txtLoginRegister">#fff</color>
-    <color name="txtHint">#686868</color>
-    <color name="btnLogin">#F35347</color>
+    <color name="txtHint">#009688</color>
+    <color name="btnLogin">#FF5252</color>
     <color name="btnCreate">#00a6ff</color>
+    <color name="txtUser">#009688</color>
+    <color name="colorGray">#8492A6</color>
 </resources>
