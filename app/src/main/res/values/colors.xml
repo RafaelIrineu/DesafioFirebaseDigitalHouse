@@ -11,4 +11,5 @@
     <color name="txtUser">#009688</color>
     <color name="colorGray">#8492A6</color>
     <color name="txtBlack">#000000</color>
+    <color name="backgroundHome">#C3C3C3</color>
 </resources>
