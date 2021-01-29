@@ -1,4 +1,7 @@
 package com.desafioFirebaseDH.model
 
-class Game {
-}
+data class Game (
+    val nome: String,
+    val ano: String,
+    val imagem: String?
+)
