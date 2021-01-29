@@ -7,4 +7,7 @@
     <string name="login">Log in</string>
     <string name="create_account">Create account</string>
     <string name="name">Name</string>
+    <string name="imagem_do_game">Imagem do Game</string>
+    <string name="nome_do_jogo">Nome do Jogo</string>
+    <string name="_2020">2020</string>
 </resources>

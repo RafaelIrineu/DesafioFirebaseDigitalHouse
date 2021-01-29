@@ -9,16 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.desafioFirebaseDH.register.RegisterActivity"></activity>
-        <activity android:name="com.desafioFirebaseDH.login.LoginActivity" />
-            <activity android:name="com.desafioFirebaseDH.splash.SplashScreen" >
+        <activity android:name=".view.home.HomeActivity"></activity>
+        <activity android:name=".view.register.RegisterActivity" />
+        <activity android:name=".view.login.LoginActivity" />
+        <activity android:name=".view.splash.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.desafioFirebaseDH.MainActivity"/>
+        <activity android:name=".MainActivity" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

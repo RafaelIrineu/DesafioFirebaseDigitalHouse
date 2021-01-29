@@ -10,4 +10,5 @@
     <color name="btnCreate">#00a6ff</color>
     <color name="txtUser">#009688</color>
     <color name="colorGray">#8492A6</color>
+    <color name="txtBlack">#000000</color>
 </resources>

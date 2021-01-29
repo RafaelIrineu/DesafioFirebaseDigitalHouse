@@ -1,4 +1,4 @@
-package com.desafioFirebaseDH.register
+package com.desafioFirebaseDH.view.register
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

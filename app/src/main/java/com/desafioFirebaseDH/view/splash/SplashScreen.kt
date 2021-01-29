@@ -1,4 +1,4 @@
-package com.desafioFirebaseDH.splash
+package com.desafioFirebaseDH.view.splash
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,8 +7,8 @@ import android.os.Handler
 import android.os.Looper
 import com.desafioFirebaseDH.MainActivity
 import com.desafioFirebaseDH.R
-import com.desafioFirebaseDH.login.LoginActivity
-import com.desafioFirebaseDH.register.RegisterActivity
+import com.desafioFirebaseDH.view.login.LoginActivity
+import com.desafioFirebaseDH.view.register.RegisterActivity
 
 class SplashScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
