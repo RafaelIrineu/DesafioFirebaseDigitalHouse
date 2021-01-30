@@ -9,6 +9,7 @@ import android.widget.EditText
 import android.widget.Toast
 import com.desafioFirebaseDH.R
 import com.desafioFirebaseDH.view.login.LoginActivity
+import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -34,7 +35,9 @@ class RegisterActivity : AppCompatActivity() {
         btnCriarConta = findViewById(R.id.btnCreateAccountRegister)
 
         btnCriarConta.setOnClickListener {
-            signUpFirebase(email.text.toString(), senha.text.toString())
+            if (validaCamposLogin()) {
+                signUpFirebase(email.text.toString(), senha.text.toString())
+            }
         }
     }
 
@@ -56,5 +59,43 @@ class RegisterActivity : AppCompatActivity() {
                         Toast.LENGTH_SHORT).show()
                 }
             }
+    }
+
+    private fun validaCamposLogin(): Boolean {
+        var resultado = true
+
+        if (nome.text?.isBlank()!!) {
+            findViewById<TextInputLayout>(R.id.name_register_text_input).editText?.error =
+                getString(R.string.campo_vazio)
+            resultado = false
+        }
+        if (email.text?.isBlank()!!) {
+            findViewById<TextInputLayout>(R.id.email_register_text_input).editText?.error =
+                getString(R.string.campo_vazio)
+            resultado = false
+        }
+        if (senha.text?.isBlank()!!) {
+            findViewById<TextInputLayout>(R.id.password_register_text_input).editText?.error =
+                getString(R.string.campo_vazio)
+            resultado = false
+        }
+        if (senha.text?.length!!<6) {
+            findViewById<TextInputLayout>(R.id.password_register_text_input).editText?.error =
+                getString(R.string.numero_caracteres)
+            resultado = false
+        }
+        if (repetirSenha.text?.isBlank()!!) {
+            findViewById<TextInputLayout>(R.id.password_repeat_register_text_input).editText?.error =
+                getString(R.string.campo_vazio)
+            resultado = false
+        }
+        if (!repetirSenha.text?.equals(senha.text)!!) {
+            findViewById<TextInputLayout>(R.id.password_repeat_register_text_input).editText?.error =
+                getString(R.string.senha_diferente)
+            findViewById<TextInputLayout>(R.id.password_register_text_input).editText?.error =
+                getString(R.string.senha_diferente)
+            resultado = false
+        }
+        return resultado
     }
 }

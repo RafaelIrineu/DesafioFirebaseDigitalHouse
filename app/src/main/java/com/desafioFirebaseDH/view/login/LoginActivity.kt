@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -11,6 +12,8 @@ import com.desafioFirebaseDH.R
 import com.desafioFirebaseDH.view.home.HomeActivity
 import com.desafioFirebaseDH.view.register.RegisterActivity
 import com.google.android.material.button.MaterialButton
+import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -34,19 +37,22 @@ class LoginActivity : AppCompatActivity() {
         btnCriarConta = findViewById(R.id.btnCreateAccount)
 
         btnCriarConta.setOnClickListener {
-            intent = Intent(this@LoginActivity,RegisterActivity::class.java)
+            intent = Intent(this@LoginActivity, RegisterActivity::class.java)
             startActivity(intent)
         }
 
         btnLogin.setOnClickListener {
-            signInFirebase(email.text.toString(), senha.text.toString())
+            if (validaCamposLogin()) {
+                signInFirebase(email.text.toString(), senha.text.toString())
+            }
         }
     }
 
     private fun signInFirebase(email: String, password: String) {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) { Log.d("FIREBASE", "signInWithEmail:success")
+                if (task.isSuccessful) {
+                    Log.d("FIREBASE", "signInWithEmail:success")
                     val user = auth.currentUser
                     intent = Intent(this@LoginActivity, HomeActivity::class.java)
                     startActivity(intent)
@@ -55,8 +61,25 @@ class LoginActivity : AppCompatActivity() {
                     Log.w("FIREBASE", "signInWithEmail:failure", task.exception)
                     Toast.makeText(
                         this@LoginActivity, "Authentication failed.",
-                        Toast.LENGTH_SHORT).show()
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
+    }
+
+    private fun validaCamposLogin(): Boolean {
+        var resultado = true
+
+        if (email.text?.isBlank()!!) {
+            findViewById<TextInputLayout>(R.id.email_text_input).editText?.error =
+                getString(R.string.campo_vazio)
+            resultado = false
+        }
+        if (senha.text?.isBlank()!!) {
+            findViewById<TextInputLayout>(R.id.password_text_input).editText?.error =
+                getString(R.string.campo_vazio)
+            resultado = false
+        }
+        return resultado
     }
 }
