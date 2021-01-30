@@ -24,6 +24,6 @@ class SplashScreen : AppCompatActivity() {
     }
 
     companion object{
-        const val HANDLER_TIME: Long = 4000
+        const val HANDLER_TIME: Long = 3000
     }
 }

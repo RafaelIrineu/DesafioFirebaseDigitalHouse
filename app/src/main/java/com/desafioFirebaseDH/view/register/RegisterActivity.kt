@@ -1,5 +1,6 @@
 package com.desafioFirebaseDH.view.register
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -7,6 +8,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.desafioFirebaseDH.R
+import com.desafioFirebaseDH.view.login.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -42,6 +44,8 @@ class RegisterActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     Log.d("FIREBASE", "createUserWithEmail:success")
                     val user = auth.currentUser
+                    intent = Intent(this@RegisterActivity, LoginActivity::class.java)
+                    startActivity(intent)
 
                 } else {
                     Toast.makeText(this, "SignIn Error", Toast.LENGTH_LONG).show()
