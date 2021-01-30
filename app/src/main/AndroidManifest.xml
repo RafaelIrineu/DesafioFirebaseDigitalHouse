@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.home.HomeActivity"></activity>
-        <activity android:name=".view.register.RegisterActivity" />
-        <activity android:name=".view.login.LoginActivity" />
+        <activity android:name=".view.CreateGameActivity"></activity>
+        <activity android:name=".view.home.HomeActivity" />
+        <activity android:name=".authentication.register.RegisterActivity" />
+        <activity android:name=".authentication.login.LoginActivity" />
         <activity android:name=".view.splash.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +21,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-
     </application>
 
 </manifest>

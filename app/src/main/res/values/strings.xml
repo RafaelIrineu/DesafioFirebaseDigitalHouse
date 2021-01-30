@@ -13,4 +13,8 @@
     <string name="campo_vazio">Campo Vazio!</string>
     <string name="numero_caracteres">Senha com mínimo de 6 caracteres!</string>
     <string name="senha_diferente">As senhas não coincidem!</string>
+    <string name="created_at">Created at</string>
+    <string name="save_game">SAVE GAME</string>
+    <string name="description">Description</string>
+    <string name="imagem_do_game">Imagem do Game</string>
 </resources>

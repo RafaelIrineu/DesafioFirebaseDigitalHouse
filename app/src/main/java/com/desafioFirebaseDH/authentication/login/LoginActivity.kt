@@ -1,18 +1,15 @@
-package com.desafioFirebaseDH.view.login
+package com.desafioFirebaseDH.authentication.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.desafioFirebaseDH.R
 import com.desafioFirebaseDH.view.home.HomeActivity
-import com.desafioFirebaseDH.view.register.RegisterActivity
-import com.google.android.material.button.MaterialButton
-import com.google.android.material.textfield.TextInputEditText
+import com.desafioFirebaseDH.authentication.register.RegisterActivity
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
