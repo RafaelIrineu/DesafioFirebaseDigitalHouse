@@ -4,10 +4,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.desafioFirebaseDH.R
-import com.desafioFirebaseDH.model.Game
 
-class HomeAdapter(private val _lista: List<Game>,
-private val _listener:(Game) -> Unit): RecyclerView.Adapter<HomeViewHolder>() {
+class HomeAdapter(private val _lista: MutableList<HomeActivity.GameReviewObjectModel>,
+                  private val _listener: (HomeActivity.GameReviewObjectModel) -> Unit): RecyclerView.Adapter<HomeViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_lista, parent, false)

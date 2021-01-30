@@ -15,7 +15,7 @@
         android:src="@mipmap/ic_launcher_foreground" />
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/btnImagem"
+        android:id="@+id/imagemDoJogo"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:contentDescription="@string/imagem_do_game"
@@ -92,7 +92,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/createdEditText"
+                android:id="@+id/createdAtEditText"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginStart="10dp"
@@ -125,7 +125,7 @@
                 android:textColor="@color/txtUser" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnLogin"
+                android:id="@+id/btnSalvarGame"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:layout_gravity="center"

@@ -17,7 +17,8 @@ import com.google.firebase.ktx.Firebase
 
 class LoginActivity : AppCompatActivity() {
 
-    private lateinit var auth: FirebaseAuth
+    private var auth = FirebaseAuth.getInstance()
+    private val _user = auth?.currentUser
     private lateinit var email: EditText
     private lateinit var senha: EditText
     private lateinit var btnLogin: Button
