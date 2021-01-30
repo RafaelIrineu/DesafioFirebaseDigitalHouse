@@ -25,7 +25,6 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(R.layout.activity_register)
 
         auth = Firebase.auth
-
         nome = findViewById(R.id.edtNameRegister)
         email = findViewById(R.id.edtEmailRegister)
         senha = findViewById(R.id.edtPasswordRegister)
@@ -37,28 +36,21 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 
-    private fun signUpFirebase(email: String, password: String){
+    private fun signUpFirebase(email: String, password: String) {
         auth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener(
-                this
-            ) { task ->
+            .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     Log.d("FIREBASE", "createUserWithEmail:success")
                     val user = auth.currentUser
 
                 } else {
                     Toast.makeText(this, "SignIn Error", Toast.LENGTH_LONG).show()
-                    Log.w(
-                        "FIREBASE",
-                        "createUserWithEmail:failure",
-                        task.exception
-                    )
+                    Log.w("FIREBASE", "createUserWithEmail:failure",
+                        task.exception)
                     Toast.makeText(
                         this@RegisterActivity, "Authentication failed.",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                        Toast.LENGTH_SHORT).show()
                 }
             }
     }
 }
-
