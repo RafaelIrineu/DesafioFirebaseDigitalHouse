@@ -6,7 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.desafioFirebaseDH.R
 import com.desafioFirebaseDH.model.Game
 
-class HomeAdapter(private val _lista: MutableList<Game>): RecyclerView.Adapter<HomeViewHolder>() {
+class HomeAdapter(private val _lista: List<Game>,
+private val _listener:(Game) -> Unit): RecyclerView.Adapter<HomeViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_lista, parent, false)
@@ -18,5 +19,6 @@ class HomeAdapter(private val _lista: MutableList<Game>): RecyclerView.Adapter<H
     override fun onBindViewHolder(holder: HomeViewHolder, position: Int) {
         val item = _lista[position]
         holder.bind(item)
+        holder.itemView.setOnClickListener { _listener(item) }
     }
 }

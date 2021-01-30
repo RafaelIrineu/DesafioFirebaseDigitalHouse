@@ -11,13 +11,14 @@
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="13dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="13dp"
         android:background="@color/colorWhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:queryHint="Search Games" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listaRecyclerView"
@@ -38,7 +39,7 @@
         android:id="@+id/btnAddJogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
+        android:layout_marginEnd="13dp"
         android:layout_marginBottom="10dp"
         android:backgroundTint="@color/btnLogin"
         android:src="@drawable/ic_baseline_add_24"

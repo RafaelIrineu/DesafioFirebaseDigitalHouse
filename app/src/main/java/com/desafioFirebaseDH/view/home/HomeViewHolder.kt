@@ -10,9 +10,9 @@ import com.squareup.picasso.Picasso
 
 class HomeViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-    private val _imagem = view.findViewById<ImageView>(R.id.imgCard)
-    private val _nomeDoJogo = view.findViewById<TextView>(R.id.txtNome)
-    private val _anoDoJogo = view.findViewById<TextView>(R.id.txtAno)
+    private val _imagem by lazy {view.findViewById<ImageView>(R.id.imgCard)}
+    private val _nomeDoJogo by lazy {view.findViewById<TextView>(R.id.txtNome)}
+    private val _anoDoJogo by lazy {view.findViewById<TextView>(R.id.txtAno)}
 
     fun bind(game: Game) {
         //carregarImagem(game.imagem, _imagem)

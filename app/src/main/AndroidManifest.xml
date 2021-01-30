@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.CreateGameActivity"></activity>
+        <activity android:name=".view.DetailActivity"></activity>
+        <activity android:name=".view.CreateGameActivity" />
         <activity android:name=".view.home.HomeActivity" />
         <activity android:name=".authentication.register.RegisterActivity" />
         <activity android:name=".authentication.login.LoginActivity" />
